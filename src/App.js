@@ -172,7 +172,7 @@ const App = () => {
         if (moves >= 15) { 
             clearInterval(timer);
             setGameStarted(false);
-            alert('Гра завершена. Ви досягли ліміту ходів.');
+             alert('Гра завершена. Ви досягли ліміту ходів. Кількість очок: ' + scoreDisplay);
         }
     
         return () => clearInterval(timer);
@@ -203,7 +203,7 @@ const App = () => {
                     onDragEnd={dragEnd}
                   />
                 ))}
-            </div>
+                </div>
           <ScoreBoard score={scoreDisplay} moves={moves} />
         </>
       )}
